@@ -1,13 +1,18 @@
 package models.character.attributes;
 
+//simply holds the scores used to determine how the "character" performs
+//on certain tasks or whatnot
+//any fancy stuff is done elsewhere
 public class AbilityScores {
-	private int strength;
-	private int dexterity;
-	private int constitution;
-	private int intelligence;
-	private int wisdom;
-	private int charisma;
+	//here's the variables - attributes that we are keeping track of
+	private int strength;	//for use in case of emergency
+	private int dexterity;	//the character's dextrousness
+	private int constitution;	//the basis of health
+	private int intelligence;	//means ...
+	private int wisdom;	//determines ...
+	private int charisma;	//influences ...
 	
+	//the Constructor for the AbilityScores class
 	public AbilityScores(int str, int dex, int con, int intel, int wis, int chr) {
 		strength = str;
 		dexterity = dex;
@@ -15,8 +20,9 @@ public class AbilityScores {
 		intelligence = intel;
 		wisdom = wis;
 		charisma = chr;
-	}
+	}	//constructor
 
+	//returns the value of strength field
 	public int getStrength() {
 		return strength;
 	}
@@ -41,6 +47,7 @@ public class AbilityScores {
 		return charisma;
 	}
 	
+	//concatenates the AbilityScores into one giant string
 	public String toString() {
 		return "Abilities:\n" + 
 				"Strength: " + getStrength() + "\n" + 
@@ -49,5 +56,5 @@ public class AbilityScores {
 				"Intelligence: " + getIntelligence() + "\n" +
 				"Wisdom: " + getWisdom() + "\n" +
 				"Charisma: " + getCharisma();
-	}
-}
+	}	//toString
+}	//AbilityScores class
